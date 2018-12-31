@@ -1,12 +1,9 @@
 function repeatedString(s, n) {
-    let matchArr = [];
-    console.log(s + s )
-    let arr = s.split('')
-    matchArr = arr.filter(value => {
-        return value === 'a';
-    })
-
-    return matchArr.length * s.length
-}
-
-console.log(repeatedString("aba", 10))
+    const counta = (str) => str.split('')
+      .filter(c => c == 'a')
+      .length
+    
+    const d = Math.floor(n / s.length)
+    const r = n - (s.length * d)
+    return d * counta(s) + counta(s.substr(0, r))
+  }
